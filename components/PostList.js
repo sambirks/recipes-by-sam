@@ -4,7 +4,7 @@ export default function PostList({ posts = [] }) {
   return (
     <section className="max-w-3xl mx-auto">
       {posts.map((post) => (
-        <article key={post.sys.id} className="my-8 mx-4">
+        <article key={post.sys.id} className="my-8 mx-8">
           <header>
             <h1 className="text-3xl text-center text-red-800 dark:text-red-400 my-3 mx-4 hover:opacity-75">
               <Link href={`/post/${post.fields.slug}`}>

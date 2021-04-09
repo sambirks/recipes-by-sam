@@ -3,13 +3,20 @@ import Author from "./Author"
 
 export default function Post({ post }) {
   return (
-    <article>
-      <header>
-        <h1>{post.fields.title}</h1>
-        <small>
-          <p>Published: {Date(post.fields.publishedDate).toString()}</p>
-        </small>
+    <article className="max-w-3xl pt-12 mx-auto">
+      <header className="my-4">
+        <h1 className="text-3xl font-bold text-center text-red-800 dark:text-red-400 my-3 mx-4 hover:opacity-75">{post.fields.title}</h1>
+        <div className="w-full border-b-2 mt-2 mb-8 py-4">
+              <div className="text-lg text-red-700 dark:text-red-400 text-center uppercase my-2 md:my-4">
+                <span>By Sam Birks</span> | <span>12/02/21</span>
+              </div>
+            </div>
       </header>
+      <img
+          className="rounded shadow-xl h-96 w- mx-auto"
+              src={post.fields.blogImage.fields.file.url}
+              alt="pic"
+            />
       <section>
         <Markdown source={post.fields.body} escapeHtml={true} />
       </section>
@@ -17,15 +24,6 @@ export default function Post({ post }) {
         <Author author={post.fields.author} />
       </footer>
       <style jsx>{`
-        header {
-          margin-bottom: 2rem;
-          padding-bottom: 2rem;
-          border-bottom: 1px solid #949499;
-        }
-        header h1 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-        }
         /*
         The section :global() selector is necessary to target the content
         that will be rendered by the Markdown component.

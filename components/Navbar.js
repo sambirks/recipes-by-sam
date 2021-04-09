@@ -40,7 +40,7 @@ export default function Navbar({ fixed }) {
                 </a>
                 </Link>
               </li>
-              <li className="nav-item text-center">
+              <li className="nav-item text-center d-none">
                 <Link href="/blog">
                 <a
                   className="px-3 py-2 flex items-center text-center tex uppercase font-bold leading-snug hover:opacity-75"

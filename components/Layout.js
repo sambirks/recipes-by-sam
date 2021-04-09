@@ -5,7 +5,7 @@ import Navbar from "./Navbar"
 
 export default function Layout({ children }) {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Recipes By Sam</title>
         <link rel="icon" href="/favicon.ico" />

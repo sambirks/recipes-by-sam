@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const Hero = () => {
     return (
-        <section className="relative h-screen bg-lightImg dark:bg-darkImg bg-cover bg-center bg-no-repeat top-0 left-0 z-0">
+        <section className="relative h-screen bg-lightImg dark:bg-darkImg bg-cover bg-center bg-no-repeat z-0">
             <div className="absolute bg-gray-100 bg-opacity-50 dark:bg-gray-700 dark:bg-opacity-50 w-full h-full">
                 <div className="max-w-5xl relative justify-center pt-36 my-2 mx-auto">
                 <h1 className="text-4xl font-bold uppercase text-center mx-4">Recipes by Sam</h1>
